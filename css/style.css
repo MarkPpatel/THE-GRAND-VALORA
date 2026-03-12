@@ -16,7 +16,7 @@ html {
 
 section[id] {
     scroll-margin-top: 100px;
-    
+
 }
 
 
@@ -183,7 +183,7 @@ body {
 
 .btn-primary {
     background-color: #00bfa5;
-    
+
     color: white;
 }
 
@@ -321,7 +321,7 @@ nav {
     width: 100%;
     height: 100%;
     background: rgba(10, 42, 36, 0.6);
-    
+
     z-index: -1;
 }
 
@@ -346,14 +346,14 @@ nav {
     width: 40px;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.4);
-    
+
 }
 
 .section-badge .badge-text {
     font-size: 0.75rem;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.6);
-    
+
 }
 
 .hero-title {
@@ -367,7 +367,7 @@ nav {
 
 .hero-title .sage {
     color: #9cb3a8;
-    
+
 }
 
 .hero-description {
@@ -384,7 +384,7 @@ nav {
 
 .btn-solid.open-modal {
     background-color: #1e707a;
-    
+
     border-radius: 2px;
 }
 
@@ -498,14 +498,14 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background: white;
-    
+
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
 }
 
 .room-image {
     height: 100%;
     overflow: hidden;
-    
+
 }
 
 .room-image img {
@@ -513,7 +513,7 @@ nav {
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
-    
+
 }
 
 .room-card:hover .room-image img {
@@ -649,7 +649,7 @@ nav {
     height: 450px;
     overflow: hidden;
     border-radius: 4px;
-    
+
 }
 
 .exp-image {
@@ -692,7 +692,7 @@ nav {
     font-size: 0.7rem;
     font-weight: 700;
     color: #4dd0e1;
-    
+
     margin-bottom: 0.8rem;
     display: block;
     letter-spacing: 0.1em;
@@ -718,7 +718,7 @@ nav {
 .gallery {
     padding: 10rem 0;
     background-color: #f7f3ed;
-    
+
 }
 
 .gallery-title {
@@ -733,7 +733,7 @@ nav {
 
 .gallery-title .light {
     color: #9cb3a8;
-    
+
     font-weight: 500;
 }
 
@@ -774,7 +774,7 @@ nav {
 
 .gallery-item.horizontal {
     height: 342.5px;
-    
+
 }
 
 
@@ -925,7 +925,7 @@ nav {
     background-color: rgba(10, 42, 36, 0.98);
     backdrop-filter: blur(15px);
     overflow: hidden;
-    
+
     padding: 0;
     align-items: center;
     justify-content: center;
@@ -1041,7 +1041,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     overflow-y: auto;
-    
+
 }
 
 .form-title {
@@ -1422,10 +1422,10 @@ nav {
     width: 100%;
     height: 100%;
     background-color: rgba(10, 42, 36, 0.98);
-    
+
     backdrop-filter: blur(15px);
     display: none;
-    
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1509,12 +1509,12 @@ nav {
     }
 
     .stat-card {
-        padding: 2rem;
-        min-width: 200px;
+        padding: 1.5rem;
+        min-width: 150px;
     }
 
     .exp-card {
-        height: 400px;
+        height: 380px;
     }
 
     .gallery-item.tall {
@@ -1536,6 +1536,11 @@ nav {
 
     .room-details {
         padding: 3rem;
+    }
+
+    .btn.btn-primary.open-modal {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -1571,39 +1576,74 @@ nav {
     .mobile-nav-toggle {
         display: block;
         z-index: 1000;
+        margin-left: auto;
+    }
+
+    header .btn-primary {
+        display: none;
+        /* Hide the large button in header on mobile to avoid clutter */
     }
 
     .mobile-nav-toggle.active i::before {
         content: "\f00d";
-        
+    }
+
+    header .btn-primary {
+        display: none;
     }
 
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
     }
 
     .hero-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        gap: 1rem;
-    }
-
-    .mobile-only {
-        display: block;
+        gap: 0.75rem;
+        margin-top: 2rem;
     }
 
     .stat-card {
-        min-width: 0;
-        width: 100%;
-        padding: 1.2rem;
+        padding: 1rem;
+        min-height: auto;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.6rem;
     }
 
     .section-title {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
     }
 
     .room-details {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .room-name {
+        font-size: 2rem;
+    }
+
+    .room-meta {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding-top: 1.5rem;
+    }
+
+    .room-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .room-footer .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .experiences-grid {
@@ -1620,10 +1660,11 @@ nav {
 
     .gallery-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .gallery-title {
-        font-size: 3.5rem;
+        font-size: 2.8rem;
     }
 
     .gallery-item.tall,
@@ -1656,10 +1697,13 @@ nav {
 
     .modal {
         overflow-y: auto;
-        display: block;
-        
-        padding: 0;
+        display: none !important;
+        /* Force hidden state on load */
+        padding: 1rem;
+        align-items: flex-start;
     }
+
+    /* Shown state controlled by JS style.display */
 
     .modal-body {
         grid-template-columns: 1fr;
@@ -1671,21 +1715,24 @@ nav {
     }
 
     .modal-content {
+        width: 95% !important;
+        max-width: 450px !important;
+        margin: 2rem auto;
         height: auto;
-        min-height: 100vh;
-        border-radius: 0;
+        min-height: auto;
+        border-radius: 8px;
+        overflow: hidden;
     }
 
     #reservationModal .modal-content {
+        width: 95% !important;
         height: auto;
-        min-height: 100vh;
+        min-height: auto;
     }
 
     .modal-right {
-        padding: 3rem 1.5rem;
+        padding: 2.5rem 1.5rem;
         height: auto;
-        display: flex;
-        flex-direction: column;
     }
 
     .form-title {
@@ -1700,7 +1747,8 @@ nav {
     }
 
     .hero-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
     }
 
     .section-title {
@@ -1711,4 +1759,20 @@ nav {
         grid-template-columns: 1fr;
         gap: 1.25rem;
     }
+}
+
+/* FINAL MOBILE FIXES */
+@media (max-width: 480px) {
+    .modal { display: none !important; visibility: hidden; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr) !important; gap: 0.5rem !important; }
+    .stat-card { padding: 0.5rem !important; }
+    .stat-number { font-size: 1.2rem !important; }
+    .stat-label { font-size: 0.5rem !important; }
+    .room-details { padding: 1rem !important; }
+    .room-meta { flex-direction: column !important; gap: 0.5rem !important; }
+    .room-footer { flex-direction: column !important; align-items: stretch !important; gap: 1rem !important; }
+    .room-footer .btn { width: 100% !important; }
+    .gallery-title { font-size: 2rem !important; }
+    .footer-top { grid-template-columns: 1fr !important; text-align: center !important; }
+    * { max-width: 100vw !important; box-sizing: border-box !important; }
 }
